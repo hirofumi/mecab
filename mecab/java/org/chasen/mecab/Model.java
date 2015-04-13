@@ -51,12 +51,12 @@ public class Model {
 
   public Tagger createTagger() {
     long cPtr = MeCabJNI.Model_createTagger(swigCPtr, this);
-    return (cPtr == 0) ? null : new Tagger(cPtr, false);
+    return (cPtr == 0) ? null : new Tagger(cPtr, true);
   }
 
   public Lattice createLattice() {
     long cPtr = MeCabJNI.Model_createLattice(swigCPtr, this);
-    return (cPtr == 0) ? null : new Lattice(cPtr, false);
+    return (cPtr == 0) ? null : new Lattice(cPtr, true);
   }
 
   public boolean swap(Model model) {
